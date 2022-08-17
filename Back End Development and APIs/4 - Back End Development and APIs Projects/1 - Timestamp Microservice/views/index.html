@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Timestamp Microservice | freeCodeCamp.org</title>
+      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+    <h1>Timestamp Microservice</h1>
+    <hr />
+    <div class="container">
+      <h3>Bruno Mogetta</h3>
+
+      <h4>Example Output with Current Time:</h4>
+      <p>
+        <! -- this code is vulnerable, do not use it in a real environment -->
+        <span id='date-time'></span>
+        <script>
+          const unixDate = new Date().getTime();
+          const utcDate = new Date(unixDate).toUTCString();
+          const currentDate = { "unix" : unixDate, "utc": utcDate};
+          document.getElementById('date-time').innerHTML=JSON.stringify(currentDate);
+        </script>
+      </p>
+    </div>
+    <div class="footer">
+      <p>
+        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+      </p>
+    </div>
+  </body>
+</html>
